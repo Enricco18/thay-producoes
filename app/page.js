@@ -56,7 +56,7 @@ export default function Home() {
             </Link>
             <Link
               href={
-                "https://www.canva.com/design/DAGbkcFRL5E/8D-KEffZsXsEAVxx-Xo-hA/view?utm_content=DAGbkcFRL5E&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h44645e4794"
+                "https://www.canva.com/design/DAGbkcFRL5E/8D-KEffZsXsEAVxx-Xo-hA/view?utm_content=DAGbkcFRL5E&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h44645e4794gt"
               }
             >
               <Button className="grow-1">
