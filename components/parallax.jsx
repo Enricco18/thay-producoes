@@ -27,7 +27,7 @@ const Parallax = () => {
       <Anchor id="home" top={"-top-[162px] md:-top-32"}></Anchor>
       <div className="fixed h-full w-full z-0 r-0 t-0">
         <video
-          src="/bg-video.mp4"
+          src="https://public-tv-productions.s3.sa-east-1.amazonaws.com/bg-video.mp4"
           className={`object-cover max-w-none object-center md:max-w-full grayscale-25`}
           style={{ filter: `brightness(${brightness})` }}
           autoPlay
