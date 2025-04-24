@@ -15,7 +15,6 @@ const Parallax = () => {
 
       // Limita o brilho mínimo a 0.3, pra não sumir completamente
       const novoBrilho = Math.max((1 - scrollVH) * defaultBrightness, 0.2);
-      console.log(novoBrilho);
       setBrightness(novoBrilho);
     };
 
