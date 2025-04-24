@@ -24,11 +24,11 @@ function getProjects(id) {
   return items;
 }
 
-const List = ({ portfolio, key }) => {
+const List = ({ portfolio }) => {
   const projects = getProjects(portfolio.id);
   return (
     <>
-      <div key={key} className="py-4 mx-auto">
+      <div className="py-4 mx-auto">
         <Anchor id={portfolio.id} top={"-top-[162px] md:-top-32"}></Anchor>
         <h1 className="pb-3">{portfolio.title}</h1>
         <Carousel>
