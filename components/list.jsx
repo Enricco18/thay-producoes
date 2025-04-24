@@ -36,18 +36,18 @@ const List = ({ portfolio }) => {
             {projects.map((project) => (
               <CarouselItem
                 key={project.id}
-                className="pl-4 md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+                className="pl-4 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 flex justify-center items-center"
               >
                 <Dialog>
                   <DialogTrigger>
-                    <div className=" bg-white flex flex-col w-56 max-w-56">
+                    <div className="bg-white flex flex-col">
                       {(project.cover != "") & (project.cover != null) ? (
                         <Image
                           src={project.cover}
                           alt="Cover for project"
                           width={100}
                           height={100}
-                          className="h-32 w-56 max-h-32 max-w-56"
+                          className="h-32 w-56 max-h-32 max-w-56 z-50 hover:relative hover:cursor-pointer hover:rounded-sm hover:border hover:border-white hover:scale-105 transition-transform duration-300 ease-in-out"
                         />
                       ) : (
                         <>
@@ -65,36 +65,40 @@ const List = ({ portfolio }) => {
                       </div>
                     </div>
                   </DialogTrigger>
-                  <DialogContent className="max-h-full overflow-y-scroll m-4 flex flex-col gap-2 justify-center items-center">
+                  <DialogContent className="overflow-y-scroll max-h-full flex flex-col gap-2">
                     <DialogHeader>
                       <DialogTitle>{project.title}</DialogTitle>
                       <DialogDescription className="py-2">
                         {project.description}
                       </DialogDescription>
                     </DialogHeader>
-                    {project.images
-                      ? project.images.map((image, index) => (
-                          <Image
-                            key={`{project.id}-image-${index}`}
-                            src={image}
-                            alt={`image for ${project.title}`}
-                            width={100}
-                            height={100}
-                            className="max-w-56"
-                          />
-                        ))
-                      : null}
-                    {project.videos
-                      ? project.videos.map((video, index) => (
-                          <video
-                            src={video}
-                            key={`{project.id}-video-${index}`}
-                            alt={`video for ${project.title}`}
-                            className=" object-center "
-                            controls
-                          ></video>
-                        ))
-                      : null}
+                    <div className="flex flex-col gap-2 max-h-full justify-center items-center">
+                      {project.images
+                        ? project.images.map((image, index) => (
+                            <div key={`{project.id}-image-${index}`}>
+                              <Image
+                                src={image}
+                                alt={`image for ${project.title}`}
+                                width={400}
+                                height={400}
+                                className="max-w-56"
+                              />
+                            </div>
+                          ))
+                        : null}
+                      {project.videos
+                        ? project.videos.map((video, index) => (
+                            <div key={`{project.id}-video-${index}`}>
+                              <video
+                                src={video}
+                                alt={`video for ${project.title}`}
+                                className=" object-center max-h-[400px]"
+                                controls
+                              ></video>
+                            </div>
+                          ))
+                        : null}
+                    </div>
                   </DialogContent>
                 </Dialog>
               </CarouselItem>
