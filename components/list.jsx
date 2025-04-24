@@ -17,7 +17,7 @@ import {
 import Anchor from "@/components/anchor";
 
 import { projects } from "@/lib/constants";
-//teste
+
 function getProjects(id) {
   const items = projects[id];
   // await setTimeout();
