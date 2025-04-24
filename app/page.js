@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <div className="px-20">
         {portfolio.map((item, i) => (
-          <List key={portfolio.id} portfolio={item} />
+          <List key={`portfolio-id-${item.id}`} portfolio={item} />
         ))}
       </div>
       <div id="contato" className="min-w-dvw bg-black relative">
