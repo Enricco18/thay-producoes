@@ -36,7 +36,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href={
-                    "https://wa.me/551398119-3045?text=Oi%21%20Vi%20o%20seu%20portfolio%20e%20queria%20fazer%20um%20or%C3%A7amento%21"
+                    "https://wa.me/5513981193045?text=Oi%21%20Vi%20o%20seu%20portfolio%20e%20queria%20fazer%20um%20or%C3%A7amento%21"
                   }
                   className="flex gap-2 text-sm font-light items-center"
                 >
@@ -49,7 +49,7 @@ export default function Home() {
           <div className="flex flex-col gap-4 md:w-[350px] justify-center items-center">
             <Link
               href={
-                "https://wa.me/551398119-3045?text=Oi%21%20Vi%20o%20seu%20portfolio%20e%20queria%20fazer%20um%20or%C3%A7amento%21"
+                "https://wa.me/5513981193045?text=Oi%21%20Vi%20o%20seu%20portfolio%20e%20queria%20fazer%20um%20or%C3%A7amento%21"
               }
             >
               <Button className="grow-1">Entre em contato</Button>
