@@ -22,7 +22,7 @@ const Parallax = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   });
   return (
-    <div className="flex h-[calc(100dvh-theme(space.32))]">
+    <div className="flex min-h-[calc(100dvh-theme(space.32))]">
       <Anchor id="home" top={"-top-[162px] md:-top-32"}></Anchor>
       <div className="fixed h-full w-full z-0 r-0 t-0">
         <video
