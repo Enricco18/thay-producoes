@@ -4,19 +4,70 @@ import { CircleHelp, Instagram, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Portfolio Thayná Vergara - Fotógrafa Profissional Santos SP",
+  description:
+    "Descubra o portfolio completo de Thayná Vergara: ensaios fotográficos, eventos, produtos e mais. Fotógrafa profissional em Santos, SP.",
+  other: {
+    'application/ld+json': JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Thayná Vergara",
+      "alternateName": "Thayná Borges Vergara",
+      "jobTitle": "Fotógrafa Profissional",
+      "description": "Fotógrafa profissional especializada em ensaios, eventos, gastronomia e produtos em Santos, São Paulo, Guarujá, São Vicente e região.",
+      "image": "https://www.thaynavergara.com/logo-h-black.png",
+      "url": "https://www.thaynavergara.com",
+      "sameAs": [
+        "https://www.instagram.com/vergarathay",
+        "https://wa.me/5513981193045"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-13-98119-3045",
+        "contactType": "customer service",
+        "email": "thaynaborgesvergara@gmail.com",
+        "availableLanguage": ["Portuguese"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santos",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "offers": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Serviços de Fotografia Profissional",
+          "description": "Ensaios fotográficos, cobertura de eventos, fotografia gastronômica e de produtos",
+          "serviceType": "Photography Services",
+          "provider": {
+            "@type": "Person",
+            "name": "Thayná Vergara"
+          }
+        }
+      }
+    })
+  }
+};
+
 export default function Home() {
   return (
-    <div>
-      <div className="px-20">
+    <main>
+      <section className="px-20">
+        <h1 className="sr-only">
+          Portfolio Thayná Vergara - Fotografia Profissional
+        </h1>
         {portfolio.map((item, i) => (
           <List key={`portfolio-id-${item.id}`} portfolio={item} />
         ))}
-      </div>
-      <div id="contato" className="min-w-dvw bg-black relative">
+      </section>
+      <footer id="contato" className="min-w-dvw bg-black relative">
         <div className="flex flex-col-reverse md:flex-row justify-center items-center py-20 gap-4">
           <div className="md:w-[350px] md:border-r ">
             <div className="flex flex-col md:block justify-center align-center">
-              <h1 className="pb-2 font-bold">Redes sociais</h1>
+              <h2 className="pb-2 font-bold">Redes sociais</h2>
               <div className="flex md:flex-col gap-2 md:gap-5 justify-between">
                 <Link
                   href={"https://www.instagram.com/vergarathay"}
@@ -66,10 +117,10 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <h1 className="font-light text-sm mr-1 text-end">
+        <p className="font-light text-sm mr-1 text-end">
           EDLA | Thayná Vergara @ 2025
-        </h1>
-      </div>
-    </div>
+        </p>
+      </footer>
+    </main>
   );
 }

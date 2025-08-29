@@ -44,7 +44,7 @@ const List = ({ portfolio }) => {
                       {(project.cover != "") & (project.cover != null) ? (
                         <Image
                           src={project.cover}
-                          alt="Cover for project"
+                          alt={`${project.title} - ${portfolio.title} por Thayná Vergara`}
                           width={100}
                           height={100}
                           className="h-32 w-56 max-h-32 max-w-56 z-50 hover:relative hover:cursor-pointer hover:rounded-sm hover:border hover:border-white hover:scale-105 transition-transform duration-300 ease-in-out"
@@ -53,7 +53,7 @@ const List = ({ portfolio }) => {
                         <>
                           <Image
                             src="/no-image.png"
-                            alt="no image"
+                            alt={`Imagem em breve - ${portfolio.title} por Thayná Vergara`}
                             width={100}
                             height={100}
                             className="h-32 w-56 max-h-32 max-w-56"
@@ -78,7 +78,7 @@ const List = ({ portfolio }) => {
                             <div key={`{project.id}-image-${index}`}>
                               <Image
                                 src={image}
-                                alt={`image for ${project.title}`}
+                                alt={`${project.title} - Fotografia profissional por Thayná Vergara, ${portfolio.title}`}
                                 width={400}
                                 height={400}
                                 className="max-w-56"
