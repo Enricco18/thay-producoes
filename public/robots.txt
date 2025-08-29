@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block access to API routes and admin areas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://www.thaynavergara.com/sitemap.xml
+
+# Crawl-delay for politeness (optional)
+Crawl-delay: 1

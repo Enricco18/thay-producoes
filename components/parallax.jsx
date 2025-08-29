@@ -15,7 +15,6 @@ const Parallax = () => {
 
       // Limita o brilho mínimo a 0.3, pra não sumir completamente
       const novoBrilho = Math.max((1 - scrollVH) * defaultBrightness, 0.2);
-      console.log(novoBrilho);
       setBrightness(novoBrilho);
     };
 
@@ -23,11 +22,11 @@ const Parallax = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   });
   return (
-    <div className="flex h-[calc(100dvh-theme(space.32))]">
+    <div className="flex min-h-[calc(100dvh-theme(space.32))]">
       <Anchor id="home" top={"-top-[162px] md:-top-32"}></Anchor>
       <div className="fixed h-full w-full z-0 r-0 t-0">
         <video
-          src="/bg-video.mp4"
+          src="https://public-tv-productions.s3.sa-east-1.amazonaws.com/bg-video.mp4"
           className={`object-cover max-w-none object-center md:max-w-full grayscale-25`}
           style={{ filter: `brightness(${brightness})` }}
           autoPlay
