@@ -73,9 +73,6 @@ export const metadata = {
   verification: {
     google: "google-site-verification-code-here",
   },
-  other: {
-    'referrer-policy': 'no-referrer-when-downgrade',
-  },
 };
 
 export default function RootLayout({ children }) {
