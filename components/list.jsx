@@ -30,7 +30,7 @@ const List = ({ portfolio }) => {
     <>
       <div className="py-4 mx-auto">
         <Anchor id={portfolio.id} top={"-top-[162px] md:-top-32"}></Anchor>
-        <h1 className="pb-3">{portfolio.title}</h1>
+        <h3 className="pb-3">{portfolio.title}</h3>
         <Carousel>
           <CarouselContent className="ml-0 md:-ml-4">
             {projects.map((project) => (

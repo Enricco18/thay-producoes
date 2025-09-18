@@ -9,47 +9,49 @@ export const metadata = {
   description:
     "Descubra o portfolio completo de Thayná Vergara: ensaios fotográficos, eventos, produtos e mais. Fotógrafa profissional em Santos, SP.",
   other: {
-    'application/ld+json': JSON.stringify({
+    "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Thayná Vergara",
-      "alternateName": "Thayná Borges Vergara",
-      "jobTitle": "Fotógrafa Profissional",
-      "description": "Fotógrafa profissional especializada em ensaios, eventos, gastronomia e produtos em Santos, São Paulo, Guarujá, São Vicente e região.",
-      "image": "https://www.thaynavergara.com/logo-h-black.png",
-      "url": "https://www.thaynavergara.com",
-      "sameAs": [
+      name: "Thayná Vergara",
+      alternateName: "Thayná Borges Vergara",
+      jobTitle: "Fotógrafa Profissional",
+      description:
+        "Fotógrafa profissional especializada em ensaios, eventos, gastronomia e produtos em Santos, São Paulo, Guarujá, São Vicente e região.",
+      image: "https://www.thaynavergara.com/logo-h-black.png",
+      url: "https://www.thaynavergara.com",
+      sameAs: [
         "https://www.instagram.com/vergarathay",
-        "https://wa.me/5513981193045"
+        "https://wa.me/5513981193045",
       ],
-      "contactPoint": {
+      contactPoint: {
         "@type": "ContactPoint",
-        "telephone": "+55-13-98119-3045",
-        "contactType": "customer service",
-        "email": "thaynaborgesvergara@gmail.com",
-        "availableLanguage": ["Portuguese"]
+        telephone: "+55-13-98119-3045",
+        contactType: "customer service",
+        email: "thaynaborgesvergara@gmail.com",
+        availableLanguage: ["Portuguese"],
       },
-      "address": {
+      address: {
         "@type": "PostalAddress",
-        "addressLocality": "Santos",
-        "addressRegion": "SP",
-        "addressCountry": "BR"
+        addressLocality: "Santos",
+        addressRegion: "SP",
+        addressCountry: "BR",
       },
-      "offers": {
+      offers: {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Serviços de Fotografia Profissional",
-          "description": "Ensaios fotográficos, cobertura de eventos, fotografia gastronômica e de produtos",
-          "serviceType": "Photography Services",
-          "provider": {
+          name: "Serviços de Fotografia Profissional",
+          description:
+            "Ensaios fotográficos, cobertura de eventos, fotografia gastronômica e de produtos",
+          serviceType: "Photography Services",
+          provider: {
             "@type": "Person",
-            "name": "Thayná Vergara"
-          }
-        }
-      }
-    })
-  }
+            name: "Thayná Vergara",
+          },
+        },
+      },
+    }),
+  },
 };
 
 export default function Home() {
@@ -74,16 +76,16 @@ export default function Home() {
                   className="flex gap-2 text-sm font-light items-center"
                 >
                   <Instagram />
-                  <h1 className="hidden md:block">@vergarathay</h1>
+                  <p className="hidden md:block">@vergarathay</p>
                 </Link>
                 <Link
                   href={"mailto:thaynaborgesvergara@gmail.com"}
                   className="flex gap-2 text-sm font-light items-center"
                 >
                   <Mail />
-                  <h1 className="hidden md:block">
+                  <p className="hidden md:block">
                     thaynaborgesvergara@gmail.com
-                  </h1>
+                  </p>
                 </Link>
                 <Link
                   href={
@@ -92,7 +94,7 @@ export default function Home() {
                   className="flex gap-2 text-sm font-light items-center"
                 >
                   <Phone />
-                  <h1 className="hidden md:block">(13) 98119-3045</h1>
+                  <p className="hidden md:block">(13) 98119-3045</p>
                 </Link>
               </div>
             </div>
