@@ -70,9 +70,12 @@ export const metadata = {
     images: ["/logo-h-black.png"],
     creator: "@vergarathay",
   },
-  verification: {
-    google: "google-site-verification-code-here",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
   },
+  themeColor: "#000000",
 };
 
 export default function RootLayout({ children }) {

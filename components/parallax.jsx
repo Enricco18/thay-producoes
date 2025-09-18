@@ -43,7 +43,7 @@ const Parallax = () => {
             height={210}
             alt="Logo Thay Vertical"
           />
-          <p className="w-full px-2 md:px-0 md:w-[500px] py-4 font-bold text-center md:text-left leading-relaxed text-shadow-lg/30">
+          <h1 className="w-full px-2 md:px-0 md:w-[500px] py-4 font-bold text-center md:text-left leading-relaxed text-shadow-lg/30">
             Oi! Eu sou a Thayná Vergara, videomaker que ama contar histórias de
             um jeito leve, criativo e verdadeiro.
             <br /> Trabalho com vídeos pra várias áreas — de marcas e empresas
@@ -52,7 +52,7 @@ const Parallax = () => {
             quando a gente tá se sentindo bem.
             <br />
             Vem conhecer meu trabalho!
-          </p>
+          </h1>
           <Button>
             <Play />
             Assisir

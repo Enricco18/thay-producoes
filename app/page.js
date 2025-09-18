@@ -9,48 +9,115 @@ export const metadata = {
   description:
     "Descubra o portfolio completo de Thayná Vergara: ensaios fotográficos, eventos, produtos e mais. Fotógrafa profissional em Santos, SP.",
   other: {
-    "application/ld+json": JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Thayná Vergara",
-      alternateName: "Thayná Borges Vergara",
-      jobTitle: "Fotógrafa Profissional",
-      description:
-        "Fotógrafa profissional especializada em ensaios, eventos, gastronomia e produtos em Santos, São Paulo, Guarujá, São Vicente e região.",
-      image: "https://www.thaynavergara.com/logo-h-black.png",
-      url: "https://www.thaynavergara.com",
-      sameAs: [
-        "https://www.instagram.com/vergarathay",
-        "https://wa.me/5513981193045",
-      ],
-      contactPoint: {
-        "@type": "ContactPoint",
-        telephone: "+55-13-98119-3045",
-        contactType: "customer service",
-        email: "thaynaborgesvergara@gmail.com",
-        availableLanguage: ["Portuguese"],
-      },
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Santos",
-        addressRegion: "SP",
-        addressCountry: "BR",
-      },
-      offers: {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Serviços de Fotografia Profissional",
-          description:
-            "Ensaios fotográficos, cobertura de eventos, fotografia gastronômica e de produtos",
-          serviceType: "Photography Services",
-          provider: {
-            "@type": "Person",
-            name: "Thayná Vergara",
+    "application/ld+json": JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Thayná Vergara",
+        alternateName: "Thayná Borges Vergara",
+        jobTitle: "Fotógrafa Profissional",
+        description:
+          "Fotógrafa profissional especializada em ensaios, eventos, gastronomia e produtos em Santos, São Paulo, Guarujá, São Vicente e região.",
+        image: "https://www.thaynavergara.com/logo-h-black.png",
+        url: "https://www.thaynavergara.com",
+        sameAs: [
+          "https://www.instagram.com/vergarathay",
+          "https://wa.me/5513981193045",
+        ],
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+55-13-98119-3045",
+          contactType: "customer service",
+          email: "thaynaborgesvergara@gmail.com",
+          availableLanguage: ["Portuguese"],
+        },
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Santos",
+          addressRegion: "SP",
+          addressCountry: "BR",
+        },
+        offers: {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Serviços de Fotografia Profissional",
+            description:
+              "Ensaios fotográficos, cobertura de eventos, fotografia gastronômica e de produtos",
+            serviceType: "Photography Services",
+            provider: {
+              "@type": "Person",
+              name: "Thayná Vergara",
+            },
           },
         },
       },
-    }),
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://www.thaynavergara.com/#business",
+        name: "Thayná Vergara Produções",
+        image: "https://www.thaynavergara.com/logo-h-black.png",
+        telephone: "+55-13-98119-3045",
+        email: "thaynaborgesvergara@gmail.com",
+        url: "https://www.thaynavergara.com",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Santos",
+          addressRegion: "SP",
+          addressCountry: "BR"
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: -23.9356,
+          longitude: -46.3353
+        },
+        openingHours: ["Mo-Sa 09:00-18:00"],
+        priceRange: "$$",
+        serviceArea: {
+          "@type": "Place",
+          name: "Santos, São Paulo, Guarujá, São Vicente e região"
+        },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Serviços de Fotografia",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Ensaios Fotográficos",
+                description: "Ensaios profissionais para redes sociais e portfolio"
+              }
+            },
+            {
+              "@type": "Offer", 
+              itemOffered: {
+                "@type": "Service",
+                name: "Cobertura de Eventos",
+                description: "Fotografia e filmagem de eventos empresariais e sociais"
+              }
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service", 
+                name: "Fotografia Gastronômica",
+                description: "Fotografia profissional de alimentos e restaurantes"
+              }
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Fotografia de Produtos",
+                description: "Fotografia comercial para e-commerce e catálogos"
+              }
+            }
+          ]
+        }
+      }
+    ]),
   },
 };
 
